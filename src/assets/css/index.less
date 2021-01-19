@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+[v-cloak] { 
+    display: none;
+}
+
+.disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+// 布局
+.el-container{
+    height: 100%;
+}
+
+.el-header, 
+.el-aside {
+    background-color: #f2f2f2;
+}
+
+.el-header{
+    transition:height 0.3s linear;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.el-aside{
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    transition:width 0.3s linear;
+}
+
+.el-main{
+    background-color: #f2f2f2;
+}
+
+// 选项卡
+.el-tabs.el-tabs--card{
+    height: 100%;
+
+    &>.el-tabs__header{
+        margin: 0;
+
+        .el-tabs__nav-wrap{
+            width: calc(100% - 100px);
+        }
+
+        .el-tabs__nav{
+            border: 1px solid #dcdee2;
+            border-bottom: none;
+        }
+    
+        .el-tabs__item{
+            background-color: #f8f8f9;
+            border-bottom: 1px solid #dcdee2;
+            color: rgba(0, 0, 0, 0.85);
+    
+            &:hover,&.is-active{
+                color: #CA4E49;
+            }
+
+            &.is-active{
+                background-color: #fff;
+                border-bottom-color: #fff;
+            }
+    
+            .el-icon-close{
+                font-size: 14px;
+                color: #000;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &>.el-tabs__content{
+        background-color: #fff;
+        height: calc(100% - 42px);
+        overflow-y: auto;
+
+        &>div{
+            height: 100%;
+        }
+    }
+}

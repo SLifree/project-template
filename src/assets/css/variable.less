@@ -1,0 +1,46 @@
+
+// 函数
+.wh(@width,@height){
+    width:@width;
+    height:@height;
+}
+
+.mixin(@name,@value) when not(isstring(@value)){
+    @{name}:@value;
+}
+
+// position [上、右、下、左]
+.position(@type,@top:initial,@right:initial,@bottom:initial,@left:initial){
+    position: @type;
+    .mixin(top,@top);
+    .mixin(right,@right);
+    .mixin(bottom,@bottom);
+    .mixin(left,@left);
+}
+
+.background(@url){
+    background:url(@url) 0 0 ~'/' 100% 100% no-repeat;
+}
+
+.border(@a,@b,@c){
+    border:@arguments;
+}
+
+// 颜色变量
+@color1:#000;
+@color2:#fff;
+@color3:#f2f2f2;
+@color4:rgba(0,0,0,.7);
+@color5:#625b5b;
+@color6:#CA4E49;
+
+// 字体变量
+@size1:14px;
+@size2:16px;
+@size3:18px;
+@size4:20px;
+@size5:22px;
+@size6:24px;
+@size7:28px;
+@size8:32px;
+@size9:50px;
